@@ -25,6 +25,13 @@ Laughters, insults, moments of tenderness and profound meditations.
 
 **_I Wrote 100 Haiku : Then Robots Ruthlessly Rated Them_** is a short journey, but one that's worth the voyage!
 
+</br>
+
+<p align="center">
+  <img src="https://github.com/ernieandflo-dotcom/bookshelf/blob/main/images/IW1HH_Front-cover_wbg.png" width="250">
+</p>
+
+Author : Ernest G. Bizimana
 <footer>
 
 <!--
@@ -34,6 +41,6 @@ Laughters, insults, moments of tenderness and profound meditations.
 
 ---
 
-For more creations, [visit the official website](https://ernieandflo.com). 
+For more creations from Ernie and Flo, [visit the official website](https://ernieandflo.com). 
 
 </footer>
