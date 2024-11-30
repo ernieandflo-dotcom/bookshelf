@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books - Nuk Peiku</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS */
+        .custom-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hover-highlight:hover {
+            background-color: rgba(255, 90, 95, 0.1);
+        }
+
+        .book-cover01 {
+            background-image: url('https://github.com/ernieandflo-dotcom/bookshelf/blob/ernieandflo-website/images/IW1HH_Front-cover_wbg.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #ddd;
+        }
+
+        .book-cover02 {
+            background-image: url('https://github.com/ernieandflo-dotcom/bookshelf/blob/ernieandflo-website/images/RNFPt2_Front-cover.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #ddd;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
@@ -22,10 +46,10 @@
         <h1 class="text-3xl font-extrabold text-center mb-8">Books</h1>
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Book Item -->
-            <div class="flex items-start space-x-6">
-                <div class="w-40 h-60 bg-gray-200 book-cover"></div>
+            <div class="flex items-start space-x-4">
+                <div class="w-60 h-60 mx-auto bg-gray-200 book-cover01"></div>
                 <div>
-                    <ul class="text-gray-800 space-y-2">
+                    <ul class="text-gray-800 space-y-4">
                         <li><strong>Title:</strong> I Wrote 100 Haiku : Then Robots Ruthlessly Rated Them</li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non massa sit amet eros eleifend cursus.</li>
                         <li><strong>Author:</strong> Ernest G. Bizimana</li>
@@ -36,10 +60,10 @@
                     </a>
                 </div>
             </div>
-            <div class="flex items-start space-x-6">
-                <div class="w-40 h-60 bg-gray-200 book-cover"></div>
+            <div class="flex items-start space-x-4">
+                <div class="w-60 h-60 mx-auto bg-gray-200 book-cover02"></div>
                 <div>
-                    <ul class="text-gray-800 space-y-2">
+                    <ul class="text-gray-800 space-y-4">
                         <li><strong>Title:</strong> Random Niggas Fighting (Part 2) </li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non massa sit amet eros eleifend cursus.</li>
                         <li><strong>Author:</strong> Florien Lavoisier Bizimana</li>
