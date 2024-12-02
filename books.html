@@ -11,7 +11,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .logo-bg {
-        	background-color: rgba(255, 255, 255, 255);
+            background-color: rgba(255, 255, 255, 255);
             border-radius: 9999px;
         }
 
@@ -19,31 +19,32 @@
             background-color: rgba(255, 90, 95, 0.1);
         }
 
+        /* Updated book cover styling */
+        .book-cover01, .book-cover02 {
+            background-size: contain; /* Ensures the image fits fully within the frame */
+            background-repeat: no-repeat; /* Prevents repeating images */
+            background-position: center; /* Centers the image */
+            border: 2px solid #ddd;
+        }
+
         .book-cover01 {
             background-image: url('https://github.com/ernieandflo-dotcom/bookshelf/blob/ernieandflo-website/images/IW1HH_Front-cover_wbg.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            border: 2px solid #ddd;
         }
 
         .book-cover02 {
             background-image: url('https://github.com/ernieandflo-dotcom/bookshelf/blob/ernieandflo-website/images/RNFPt2_Front-cover.jpg?raw=true');
-            background-size: cover;
-            background-position: center;
-            border: 2px solid #ddd;
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-     <!-- Header -->
+    <!-- Header -->
 <header class="bg-black border-b border-gray-300 py-2">
     <nav class="max-w-7xl mx-auto flex items-center justify-between px-4">
         <!-- Logo Section -->
         <div class="flex items-center">
             <a href="index.html" class="logo-padding">
                 <img src="https://raw.githubusercontent.com/ernieandflo-dotcom/bookshelf/0894cab24a3cba51023ef85c8541652ef5d89e5c/images/meme_sealofapproval.svg" alt="Ernie And Flo Logo" class="logo-bg h-12 w-12">
-                <!-- Replace with your actual logo URL -->
             </a>
         </div>
 
@@ -81,41 +82,47 @@
 </header>
 
     <!-- Books Section -->
-    <section class="py-12 px-6">
-        <h1 class="text-3xl font-extrabold text-center mb-8">Books</h1>
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Book Item -->
-            <div class="flex items-start space-x-4">
-                <div class="w-60 h-60 mx-auto bg-gray-200 book-cover01"></div>
-                <div>
-                    <ul class="text-gray-800 space-y-4">
-                        <li><strong>Title:</strong> I Wrote 100 Haiku : Then Robots Ruthlessly Rated Them</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non massa sit amet eros eleifend cursus.</li>
-                        <li><strong>Author:</strong> Ernest G. Bizimana</li>
-                        <li><strong>Year:</strong> 2024</li>
-                    </ul>
-                    <a href="index.html" class="inline-block mt-4 bg-red-500 text-white font-medium px-6 py-2 rounded hover:bg-red-600 transition duration-300">
-                        Read the Story
-                    </a>
-                </div>
-            </div>
-            <div class="flex items-start space-x-4">
-                <div class="w-60 h-60 mx-auto bg-gray-200 book-cover02"></div>
-                <div>
-                    <ul class="text-gray-800 space-y-4">
-                        <li><strong>Title:</strong> Random Niggas Fighting (Part 2) </li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non massa sit amet eros eleifend cursus.</li>
-                        <li><strong>Author:</strong> Florien Lavoisier Bizimana</li>
-                        <li><strong>Year:</strong> 2023</li>
-                    </ul>
-                    <a href="https://globalcomix.com/c/random-niggas-fighting-part-2" class="inline-block mt-4 bg-red-500 text-white font-medium px-6 py-2 rounded hover:bg-red-600 transition duration-300">
-                        Read the Story
-                    </a>
-                    <p class=text-green-700>*Free for a limited time only*</p>
-                </div>
+<section class="py-12 px-6">
+    <h1 class="text-3xl font-extrabold text-center mb-8">Books</h1>
+    <div class="max-w-5xl mx-auto grid gap-8">
+        <!-- Book Item -->
+        <div class="flex flex-col md:flex-row md:items-start md:space-x-4 mb-8">
+            <!-- Book Cover -->
+            <div class="book-cover01 mx-auto md:mx-0 w-60 h-80 flex-shrink-0"></div>
+            <!-- Book Information -->
+            <div class="mt-4 md:mt-0 md:flex-1">
+                <ul class="text-gray-800 space-y-4">
+                    <li><strong>Title:</strong> I Wrote 100 Haiku : Then Robots Ruthlessly Rated Them</li>
+                    <li>Come meet Conro, Professor Namahoro, and Jacob Jake Johnson Junior. They all have something in common: they are robots. Actually, they have something else in common: they do not shy away when it comes to what they think of my poems.<br><br>"A bloody introduction to the haiku poem."</li>
+                    <li><strong>Author:</strong> Ernest G. Bizimana</li>
+                    <li><strong>Year:</strong> 2024</li>
+                </ul>
+                <a href="index.html" class="inline-block mt-4 bg-red-500 text-white font-medium px-6 py-2 rounded hover:bg-red-600 transition duration-300">
+                    Read the Story
+                </a>
             </div>
         </div>
-    </section>
+
+        <!-- Second Book Item -->
+        <div class="flex flex-col md:flex-row md:items-start md:space-x-4 mb-8">
+            <!-- Book Cover -->
+            <div class="book-cover02 mx-auto md:mx-0 w-60 h-80 flex-shrink-0"></div>
+            <!-- Book Information -->
+            <div class="mt-4 md:mt-0 md:flex-1">
+                <ul class="text-gray-800 space-y-4">
+                    <li><strong>Title:</strong> Random Niggas Fighting (Part 2)</li>
+                    <li>A Canadian-made manga with creative character designs, mysterious and never-before-seen abilities, and amazing fighting choreographies.<br><br>Lots of n***** fighting. Lots of n***** dying.<br><br>Simple and straight to the point.</li>
+                    <li><strong>Author:</strong> Florien Lavoisier Bizimana</li>
+                    <li><strong>Year:</strong> 2023</li>
+                </ul>
+                <a href="https://globalcomix.com/c/random-niggas-fighting-part-2" class="inline-block mt-4 bg-red-500 text-white font-medium px-6 py-2 rounded hover:bg-red-600 transition duration-300">
+                    Read the Story
+                </a>
+                <p class="text-green-700">*Free for a limited time only*</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-gray-100 mt-16 py-8">
@@ -129,8 +136,14 @@
     const menuToggle = document.getElementById("menu-toggle");
     const dropdownMenu = document.getElementById("dropdown-menu");
 
+    // Toggle dropdown menu on click
     menuToggle.addEventListener("click", () => {
         dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Hide dropdown menu on hover out
+    dropdownMenu.addEventListener("mouseleave", () => {
+        dropdownMenu.classList.add("hidden");
     });
 </script>
 
