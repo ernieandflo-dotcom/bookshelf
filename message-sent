@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent Successfully</title>
+    <script>
+        // Redirect to the home page after 5 seconds
+        setTimeout(() => {
+            window.location.href = "https://www.ernieandflo.com";
+        }, 7000);
+    </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .message-box {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1rem;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>Thank you!</h1>
+        <p>Your message was successfully sent to us.</p>
+        <p>You will be automatically redirected to the home page.</p>
+    </div>
+</body>
+</html>
