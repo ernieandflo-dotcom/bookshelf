@@ -111,8 +111,14 @@
     const menuToggle = document.getElementById("menu-toggle");
     const dropdownMenu = document.getElementById("dropdown-menu");
 
+    // Toggle dropdown menu on click
     menuToggle.addEventListener("click", () => {
         dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Hide dropdown menu on hover out
+    dropdownMenu.addEventListener("mouseleave", () => {
+        dropdownMenu.classList.add("hidden");
     });
 </script>
 
