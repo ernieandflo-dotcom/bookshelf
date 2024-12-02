@@ -29,7 +29,6 @@
         <div class="flex items-center">
             <a href="index.html" class="logo-padding">
                 <img src="https://raw.githubusercontent.com/ernieandflo-dotcom/bookshelf/0894cab24a3cba51023ef85c8541652ef5d89e5c/images/meme_sealofapproval.svg" alt="Ernie And Flo Logo" class="logo-bg h-12 w-12">
-                <!-- Replace with your actual logo URL -->
             </a>
         </div>
 
@@ -108,8 +107,14 @@
     const menuToggle = document.getElementById("menu-toggle");
     const dropdownMenu = document.getElementById("dropdown-menu");
 
+    // Toggle dropdown menu on click
     menuToggle.addEventListener("click", () => {
         dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Hide dropdown menu on hover out
+    dropdownMenu.addEventListener("mouseleave", () => {
+        dropdownMenu.classList.add("hidden");
     });
 </script>
 
