@@ -10,6 +10,10 @@
         .custom-shadow {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .logo-bg {
+        	background-color: rgba(255, 255, 255, 255);
+            border-radius: 9999px;
+        }
 
         .hover-highlight:hover {
             background-color: rgba(255, 90, 95, 0.1);
@@ -33,13 +37,48 @@
 <body class="bg-gray-50 text-gray-900 font-sans">
 
      <!-- Header -->
-    <header class="bg-gray-800 border-b border-gray-300 py-4">
-        <nav class="max-w-7xl mx-auto flex justify-center space-x-8">
+<header class="bg-black border-b border-gray-300 py-2">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4">
+        <!-- Logo Section -->
+        <div class="flex items-center">
+            <a href="index.html" class="logo-padding">
+                <img src="https://raw.githubusercontent.com/ernieandflo-dotcom/bookshelf/0894cab24a3cba51023ef85c8541652ef5d89e5c/images/meme_sealofapproval.svg" alt="Ernie And Flo Logo" class="logo-bg h-12 w-12">
+                <!-- Replace with your actual logo URL -->
+            </a>
+        </div>
+
+        <!-- Hamburger Menu for Small Screens -->
+        <button 
+            id="menu-toggle" 
+            class="block md:hidden text-gray-100 hover:text-red-500 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <!-- Navigation Links -->
+        <div 
+            id="nav-links" 
+            class="hidden md:flex flex-grow justify-center space-x-8 items-center">
+            <span class="border-l border-gray-800"></span>
+            <a href="index.html" class="text-lg font-bold text-gray-100 hover:text-red-500">Home</a>
+            <span class="border-l border-gray-500"></span>
+            <a href="books.html" class="text-lg font-bold text-gray-100 hover:text-red-500">Books</a>
+            <span class="border-l border-gray-500"></span>
+            <a href="about.html" class="text-lg font-bold text-gray-100 hover:text-red-500">About Us</a>
+            <span class="border-l border-gray-800"></span>
+        </div>
+
+        <!-- Dropdown Menu for Small Screens -->
+        <div 
+            id="dropdown-menu" 
+            class="hidden flex flex-col space-y-4 bg-black p-4 absolute right-4 top-16 rounded shadow-md z-50">
             <a href="index.html" class="text-lg font-bold text-gray-100 hover:text-red-500">Home</a>
             <a href="books.html" class="text-lg font-bold text-gray-100 hover:text-red-500">Books</a>
             <a href="about.html" class="text-lg font-bold text-gray-100 hover:text-red-500">About Us</a>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <!-- Books Section -->
     <section class="py-12 px-6">
@@ -85,6 +124,15 @@
             <a href="about.html" class="text-red-500 hover:underline">Contact</a>
         </div>
     </footer>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+
+    menuToggle.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+    });
+</script>
 
 </body>
 </html>
