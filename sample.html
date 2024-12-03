@@ -86,7 +86,7 @@
         </button>
     </form>
 
-    <p id="responseMessage" class="text-center text-green-500 font-medium mt-4 hidden">Thank you! Your free sample has been sent to your email.</p>
+    <p id="responseMessage" class="text-center text-green-500 font-medium mt-4 hidden">Thank you! Your free sample has been sent to your email. You will be automatically redirected to the home page.</p>
 </section>
 
 <script src="email.min.js"></script>
@@ -123,8 +123,8 @@
 
             responseMessage.classList.remove("hidden");
             setTimeout(() => {
-                window.location.href = "https://www.ernieandflo.com/sample-sent.html";
-            }, 3000); // Redirect after 3 seconds
+                window.location.href = "https://www.ernieandflo.com/";
+            }, 4000); // Redirect after 4 seconds
         } 
         catch (error) {
             console.error("Email sending error:", error);
