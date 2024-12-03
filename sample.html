@@ -125,9 +125,16 @@
             setTimeout(() => {
                 window.location.href = "https://www.ernieandflo.com/sample-sent.html";
             }, 3000); // Redirect after 3 seconds
-        } catch (error) {
+        } 
+        catch (error) {
             console.error("Email sending error:", error);
-            alert("Something went wrong! Please try again later.");
+            if (error.status) {
+                alert(`Error ${error.status}: ${error.text}`);
+            } else if (error.message) {
+                alert(`Network error: ${error.message}`);
+            } else {
+                alert("An unknown error occurred. Please try again later.");
+            }
         }
     });
 </script>
