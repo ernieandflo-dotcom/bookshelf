@@ -79,11 +79,9 @@
         <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2 mb-4" placeholder="Enter your email">
         
         <div class="flex items-start mb-4">
-        	<input type="text" name="honeypot" style="display: none;">
             <input type="checkbox" id="consent" name="consent" required class="mr-2">
             <label for="consent" class="text-gray-700">I agree to the use of my personal information for communication purposes.</label>
         </div>
-        <input type="hidden" name="redirectTo" value="https://www.ernieandflo.com/sample-sent.html">
         <div class="g-recaptcha" data-sitekey="6Lev4o8qAAAAAOGUf1vY-RBsiPlVgZTL-LKwICuh"></div>
         <button type="submit" class="w-full bg-red-500 text-white font-medium px-4 py-2 rounded hover:bg-red-700 transition duration-300">
             Get sample (FREE)
@@ -104,6 +102,12 @@
     sampleForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
+        const honeypot = document.querySelector('input[name="honeypot"]').value;
+        if (honeypot) {
+            alert("Spam detected!");
+            return;
+        }
+
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const consent = document.getElementById("consent").checked;
@@ -120,10 +124,12 @@
             });
 
             responseMessage.classList.remove("hidden");
-            sampleForm.reset(); // Reset form after submission
+            setTimeout(() => {
+                window.location.href = "https://www.ernieandflo.com/sample-sent.html";
+            }, 3000); // Redirect after 3 seconds
         } catch (error) {
-            alert("Something went wrong! Please try again later.");
             console.error("Email sending error:", error);
+            alert("Something went wrong! Please try again later.");
         }
     });
 </script>
