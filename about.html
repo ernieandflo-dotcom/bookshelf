@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Ernie And Flo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Changed to reCAPTCHA v2 API -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- reCAPTCHA v3 API -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcUHCErAAAAACzEz7N6VA4J4jdVlWpT523LX3K2
+"></script>
     <style>
         /* Custom CSS */
         .custom-shadow {
@@ -89,18 +90,23 @@
         	<label for="message" class="block text-gray-700 font-medium">Message</label>
             <textarea name="message" rows="4" required class="w-full border border-gray-300 px-4 py-2 rounded"></textarea> <!-- Optional -->
         </div>
-        <div class="flex items-start space-x-2">
-            <input type="checkbox" id="consent" name="consent" required class="mt-1">
-        	<label for="consent" class="text-gray-700">I consent to the use of my personal information for communication purposes.</label>
-        </div>
         <div>
             <input type="text" name="honeypot" style="display: none;">
         </div>
         <input type="hidden" name="redirectTo" value="https://www.ernieandflo.com/message-sent.html">
-        <!-- Changed to reCAPTCHA v2 implementation -->
-        <div class="g-recaptcha" data-sitekey="6LcUHCErAAAAACzEz7N6VA4J4jdVlWpT523LX3K2"></div>
+        <!-- reCAPTCHA v3 token field (hidden) -->
+        <input type="hidden" id="recaptchaResponse" name="recaptcha_response">
+        
+        <div class="flex items-start space-x-2">
+            <input type="checkbox" id="consent" name="consent" required class="mt-1">
+            <label for="consent" class="text-gray-700">I consent to the use of my personal information for communication purposes.</label>
+        </div>
+        
+        <input type="hidden" name="honeypot" style="display: none;">
+        <input type="hidden" name="redirectTo" value="https://www.ernieandflo.com/message-sent.html">
+        
         <button type="submit" class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-300">
-                Submit
+            Submit
         </button>
     </form>
     </section>
@@ -126,7 +132,20 @@
         dropdownMenu.classList.add("hidden");
     });
     
-    // Removed the reCAPTCHA v3 code since we're using v2
+    // reCAPTCHA v3 implementation
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      grecaptcha.ready(function() {
+        grecaptcha.execute('YOUR_SITE_KEY', {action: 'submit'}).then(function(token) {
+          // Add the token to the form
+          document.getElementById('recaptchaResponse').value = token;
+
+          // Submit the form
+          e.target.submit();
+        });
+      });
+    });
 </script>
 
 </body>
