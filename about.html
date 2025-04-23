@@ -22,7 +22,6 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
-
     <!-- Header -->
 <header class="bg-black border-b border-gray-300 py-2">
     <nav class="max-w-7xl mx-auto flex items-center justify-between px-4">
@@ -72,33 +71,35 @@
         <p class="text-lg text-gray-800 max-w-3xl mx-auto mb-12 text-center">
             Ernie and Flo are two artistic brothers looking to express their creativity in their own respective ways. From poetry, to mangas, to hip-hop and indie music, they do it all and refuse to be put in a box.<br><br> Ernie And Flo Creations is an answer to the question : "What publisher is crazy enough to buy into such an eclectic proposal?" 
         </p>
-
-        <!-- Contact Form -->
-     <form action="https://api.staticforms.xyz/submit" method="post" class="max-w-lg mx-auto space-y-6 bg-white px-6 pt-1 pb-6 rounded-lg shadow">
-        <input type="hidden" name="accessKey" value="578131e7-ecc8-460f-887c-7cc2649144f7"> <!-- Required -->
+        
+    <!-- Contact Form - Modified with client-side validation -->
+    <form id="contactForm" action="https://api.staticforms.xyz/submit" method="post" class="max-w-lg mx-auto space-y-6 bg-white px-6 pt-1 pb-6 rounded-lg shadow">
+        <input type="hidden" name="accessKey" value="578131e7-ecc8-460f-887c-7cc2649144f7">
         <div>
-        	<label for="name" class="block text-gray-700 font-medium">Name</label>
-            <input type="text" name="name" required class="w-full border border-gray-300 px-4 py-2 rounded"> <!-- Optional -->
+            <label for="name" class="block text-gray-700 font-medium">Name</label>
+            <input type="text" name="name" required class="w-full border border-gray-300 px-4 py-2 rounded">
         </div>
         <div>
-        	<label for="email" class="block text-gray-700 font-medium">Email Address</label>
-            <input type="text" name="email" required class="w-full border border-gray-300 px-4 py-2 rounded"> <!-- Optional -->
+            <label for="email" class="block text-gray-700 font-medium">Email Address</label>
+            <input type="text" name="email" required class="w-full border border-gray-300 px-4 py-2 rounded">
         </div>
         <div>
-        	<label for="message" class="block text-gray-700 font-medium">Message</label>
-            <textarea name="message" rows="4" required class="w-full border border-gray-300 px-4 py-2 rounded"></textarea> <!-- Optional -->
+            <label for="message" class="block text-gray-700 font-medium">Message</label>
+            <textarea name="message" rows="4" required class="w-full border border-gray-300 px-4 py-2 rounded"></textarea>
         </div>
         <div class="flex items-start space-x-2">
             <input type="checkbox" id="consent" name="consent" required class="mt-1">
-        	<label for="consent" class="text-gray-700">I consent to the use of my personal information for communication purposes.</label>
+            <label for="consent" class="text-gray-700">I consent to the use of my personal information for communication purposes.</label>
         </div>
         <div>
             <input type="text" name="honeypot" style="display: none;">
         </div>
         <input type="hidden" name="redirectTo" value="https://www.ernieandflo.com/message-sent.html">
         <div class="g-recaptcha" data-sitekey="6Lev4o8qAAAAAOGUf1vY-RBsiPlVgZTL-LKwICuh"></div>
-        <button type="submit" value="Submit" class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-300">
-                Submit
+        <!-- Add error message div -->
+        <div id="recaptchaError" class="text-red-500 text-sm hidden">Please complete the reCAPTCHA verification.</div>
+        <button type="submit" class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-300">
+            Submit
         </button>
     </form>
     </section>
@@ -110,20 +111,40 @@
         </div>
     </footer>
 
-<script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const dropdownMenu = document.getElementById("dropdown-menu");
+    <script>
+        // Your existing menu toggle script
+        const menuToggle = document.getElementById("menu-toggle");
+        const dropdownMenu = document.getElementById("dropdown-menu");
 
-    // Toggle dropdown menu on click
-    menuToggle.addEventListener("click", () => {
-        dropdownMenu.classList.toggle("hidden");
-    });
+        menuToggle.addEventListener("click", () => {
+            dropdownMenu.classList.toggle("hidden");
+        });
 
-    // Hide dropdown menu on hover out
-    dropdownMenu.addEventListener("mouseleave", () => {
-        dropdownMenu.classList.add("hidden");
-    });
-</script>
+        dropdownMenu.addEventListener("mouseleave", () => {
+            dropdownMenu.classList.add("hidden");
+        });
 
+        // New reCAPTCHA validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // Check if reCAPTCHA is filled
+            const response = grecaptcha.getResponse();
+            if (response.length === 0) {
+                e.preventDefault(); // Prevent form submission
+                document.getElementById('recaptchaError').classList.remove('hidden');
+                // Scroll to the reCAPTCHA for better UX
+                document.querySelector('.g-recaptcha').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        });
+
+        // Optional: Hide error when user starts interacting with reCAPTCHA
+        if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.ready(function() {
+                grecaptcha.execute();
+            });
+        }
+    </script>
 </body>
 </html>
