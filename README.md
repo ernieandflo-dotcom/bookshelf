@@ -32,6 +32,31 @@ Laughters, insults, moments of tenderness and profound meditations.
 </p>
 
 Author : Ernest G. Bizimana
+
+-----
+-----
+-----
+
+# Random Niggas Fighting (Part 2)
+
+**_*Free for a limited time only*_***
+</header>
+
+A Canadian-made manga with creative character designs, mysterious and never-before-seen abilities, and amazing fighting choreographies.
+
+Lots of n***** fighting. Lots of n***** dying.
+
+
+**_Random Niggas Fighting (Part 2)_** is simple and straight to the point.
+
+</br>
+
+<p align="center">
+  <img src="https://github.com/ernieandflo-dotcom/bookshelf/blob/main/images/RNFPt2_Front-cover.jpg" width="250">
+</p>
+
+Author : Florien Lavoisier Bizimana
+
 <footer>
 
 <!--
