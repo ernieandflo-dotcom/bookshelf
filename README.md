@@ -52,7 +52,7 @@ Lots of n***** fighting. Lots of n***** dying.
 </br>
 
 <p align="center">
-  <img src="https://github.com/ernieandflo-dotcom/bookshelf/blob/main/images/RNFPt2_Front-cover.jpg" width="250">
+  <img src="https://github.com/ernieandflo-dotcom/bookshelf/blob/main/images/RNFPt2_Front-cover.png" width="250">
 </p>
 
 Author : Florien Lavoisier Bizimana
