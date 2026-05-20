@@ -58,14 +58,12 @@
 
     <p class="section__lead" data-i18n="about.lead__html"></p>
 
-    <form
-      id="contactForm"
-      action="https://api.staticforms.xyz/submit"
-      method="post"
-      class="form-card"
-    >
-      <input type="hidden" name="accessKey" value="578131e7-ecc8-460f-887c-7cc2649144f7">
-      <input type="hidden" name="redirectTo" value="https://www.ernieandflo.com/message-sent.html">
+    <!--
+      NOTE: no action/method — submission is handled by contact-form.js via EmailJS.
+      The reCAPTCHA check also lives in contact-form.js (main.js initContactForm
+      is intentionally kept as a fallback but the full logic is here).
+    -->
+    <form id="contactForm" class="form-card" novalidate>
       <input type="text" name="honeypot" class="honeypot" tabindex="-1" autocomplete="off">
 
       <div class="form-group">
@@ -116,8 +114,11 @@
     </div>
   </footer>
 
+  <!-- EmailJS must load before contact-form.js -->
+  <script src="js/email.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/i18n-engine.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/contact-form.js"></script>
 </body>
 </html>
