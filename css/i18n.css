@@ -1,0 +1,107 @@
+/* ============================================================
+   i18n additions -- append to the end of css/styles.css
+   ============================================================ */
+
+
+/* ── Language toggle (desktop nav) ─────────────────────────── */
+.nav-lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.lang-sep {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.8rem;
+  line-height: 1;
+  padding: 0 0.1rem;
+  user-select: none;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: rgba(232, 224, 208, 0.45);
+  padding: 0.2rem 0.3rem;
+  border-radius: 2px;
+  transition: color var(--transition);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--color-nav-link);
+}
+
+.lang-btn--active {
+  color: var(--color-nav-link);
+}
+
+/* ── Language toggle (mobile dropdown) ─────────────────────── */
+.mobile-lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 0.25rem;
+}
+
+.mobile-lang-toggle .lang-btn {
+  font-size: 0.9rem;
+  padding: 0.25rem 0.4rem;
+}
+
+/* ── Book language badge (books.html) ───────────────────────── */
+.book-lang-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+  border: 1px solid var(--color-border);
+}
+
+/* French books */
+.book-lang-badge[data-book-lang="fr"] {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+  color: #3730a3;
+}
+
+.book-lang-badge[data-book-lang="fr"]::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4f46e5;
+  flex-shrink: 0;
+}
+
+/* English books */
+.book-lang-badge[data-book-lang="en"] {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #15803d;
+}
+
+.book-lang-badge[data-book-lang="en"]::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  flex-shrink: 0;
+}

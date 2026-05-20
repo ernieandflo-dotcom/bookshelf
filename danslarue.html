@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dans la rue -- album jeunesse sur l'itinerance, illustre par Florien Lavoisier Bizimana.">
+  <title>Dans la rue -- Ernie And Flo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/i18n.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo" aria-label="Retour a l'accueil">
+        <img
+          src="https://raw.githubusercontent.com/ernieandflo-dotcom/bookshelf/0894cab24a3cba51023ef85c8541652ef5d89e5c/images/meme_sealofapproval.svg"
+          alt="Ernie And Flo"
+          width="44" height="44"
+        >
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"
+        data-i18n-aria="nav.toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+
+      <ul class="nav-links" role="navigation" data-i18n-aria="nav.label">
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="books.html" data-i18n="nav.books">Livres</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="about.html" data-i18n="nav.about">A propos</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+      </ul>
+
+      <div id="dropdown-menu" class="dropdown-menu" role="navigation" data-i18n-aria="nav.mobile">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="books.html" data-i18n="nav.books">Livres</a>
+        <a href="about.html" data-i18n="nav.about">A propos</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="page-intro">
+    <p data-i18n="dlr.banner">Album jeunesse · L'Engrenage Saint-Roch x Midi trente · 2026</p>
+  </div>
+
+  <div class="quote-band">
+    <blockquote data-i18n="dlr.quote">
+      Ce projet rappelle que les personnes en situation d'itinerance sont des humains avant tout.
+    </blockquote>
+    <cite data-i18n="dlr.quote.cite">Florien Lavoisier Bizimana - Illustrateur</cite>
+  </div>
+
+  <section class="section-block">
+    <p class="section-label" data-i18n="dlr.project.label">Le projet</p>
+    <h2 class="section-block__title" data-i18n="dlr.project.title">Ne d'un besoin du quartier</h2>
+    <p class="section-block__lead" data-i18n="dlr.project.lead">
+      Un comite citoyen, des enseignants, des travailleurs de rue, des personnes touchees par
+      l'itinerance et les enfants eux-memes ont faconne ce livre de bout en bout.
+    </p>
+  </section>
+
+  <div class="project-grid">
+    <div class="project-col">
+      <h3 data-i18n="dlr.col1.title">L'Engrenage Saint-Roch</h3>
+      <p data-i18n="dlr.col1.p1"></p>
+      <p data-i18n="dlr.col1.p2__html"></p>
+      <p data-i18n="dlr.col1.p3__html"></p>
+    </div>
+    <div class="project-col">
+      <h3 data-i18n="dlr.col2.title">Une voix humaine sur un enjeu complexe</h3>
+      <p data-i18n="dlr.col2.p1"></p>
+      <p data-i18n="dlr.col2.p2"></p>
+      <p data-i18n="dlr.col2.p3__html"></p>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-grid-inner">
+      <div class="info-item">
+        <div class="info-icon">📖</div>
+        <span class="info-value" data-i18n="dlr.info.format.value">Album jeunesse</span>
+        <span class="info-key"   data-i18n="dlr.info.format.key">Format</span>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🏫</div>
+        <span class="info-value" data-i18n="dlr.info.age.value">Des 6 ans</span>
+        <span class="info-key"   data-i18n="dlr.info.age.key">Public cible</span>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🏙️</div>
+        <span class="info-value" data-i18n="dlr.info.hood.value">Saint-Roch, Quebec</span>
+        <span class="info-key"   data-i18n="dlr.info.hood.key">Quartier d'origine</span>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🤝</div>
+        <span class="info-value" data-i18n="dlr.info.sponsor.value">L'Engrenage Saint-Roch</span>
+        <span class="info-key"   data-i18n="dlr.info.sponsor.key">Commanditaire</span>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📚</div>
+        <span class="info-value" data-i18n="dlr.info.publisher.value">Midi trente</span>
+        <span class="info-key"   data-i18n="dlr.info.publisher.key">Maison d'edition</span>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🎨</div>
+        <span class="info-value" data-i18n="dlr.info.illus.value">Florien L. Bizimana</span>
+        <span class="info-key"   data-i18n="dlr.info.illus.key">Illustrateur</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section-block">
+    <p class="section-label" data-i18n="dlr.press.label">Dans les medias</p>
+    <h2 class="section-block__title" data-i18n="dlr.press.title">Couverture de presse</h2>
+    <p class="section-block__lead" data-i18n="dlr.press.lead"></p>
+  </section>
+
+  <div class="press-grid" style="padding-bottom: 5rem;">
+    <div class="press-card">
+      <span class="press-card__outlet" data-i18n="dlr.press1.outlet">Radio-Canada · ICI</span>
+      <h3 class="press-card__headline" data-i18n="dlr.press1.headline"></h3>
+      <p class="press-card__excerpt" data-i18n="dlr.press1.excerpt"></p>
+      <a href="https://ici.radio-canada.ca/nouvelle/2244074/livre-itinerance-eleves-saint-roch"
+        target="_blank" rel="noopener" class="press-card__link">
+        <span data-i18n="dlr.press1.link">Lire l'article</span> →
+      </a>
+    </div>
+    <div class="press-card">
+      <span class="press-card__outlet" data-i18n="dlr.press2.outlet">Mon Saint-Roch</span>
+      <h3 class="press-card__headline" data-i18n="dlr.press2.headline"></h3>
+      <p class="press-card__excerpt" data-i18n="dlr.press2.excerpt"></p>
+      <a href="https://monsaintroch.com/2026/aborder-simplement-un-enjeu-complexe-dans-la-rue-un-album-jeunesse-sur-litinerance/"
+        target="_blank" rel="noopener" class="press-card__link">
+        <span data-i18n="dlr.press2.link">Lire l'article</span> →
+      </a>
+    </div>
+  </div>
+
+  <section class="section-block" style="padding-bottom: 2rem;">
+    <p class="section-label" data-i18n="dlr.endorse.label">Soutien politique</p>
+    <h2 class="section-block__title" data-i18n="dlr.endorse.title">Un "incontournable" selon les elus</h2>
+    <p class="section-block__lead" data-i18n="dlr.endorse.lead"></p>
+  </section>
+
+  <div class="endorsement-political">
+    <div class="political-card">
+      <span class="political-card__tag" data-i18n="dlr.card1.tag">Quebec solidaire · Sainte-Marie-Saint-Jacques</span>
+      <p class="political-card__quote" data-i18n="dlr.card1.quote"></p>
+      <span class="political-card__name" data-i18n="dlr.card1.name">Manon Masse, deputee</span>
+    </div>
+    <div class="political-card">
+      <span class="political-card__tag" data-i18n="dlr.card2.tag">Quebec solidaire · Taschereau</span>
+      <p class="political-card__quote" data-i18n="dlr.card2.quote__html"></p>
+      <span class="political-card__name" data-i18n="dlr.card2.name">Etienne Grandmont, depute de Taschereau</span>
+    </div>
+  </div>
+
+  <div class="quote-band">
+    <blockquote data-i18n="dlr.children.quote">
+      Quand je vois quelqu'un dans la rue, ca me fait sentir que j'ai de la chance
+      parce que, moi, j'ai une maison, j'ai des parents qui m'aiment, j'ai de la nourriture.
+    </blockquote>
+    <cite data-i18n="dlr.children.cite">Lou Warnke Lake - eleve, ecole des Berges</cite>
+  </div>
+
+  <section class="section-block" style="padding-bottom: 2rem;">
+    <p class="section-label" data-i18n="dlr.gallery.label">Lancement · Bibliotheque Gabrielle-Roy</p>
+    <h2 class="section-block__title" data-i18n="dlr.gallery.title">Journee en images</h2>
+    <p class="section-block__lead" data-i18n="dlr.gallery.lead"></p>
+  </section>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img
+        src="https://github.com/ernieandflo-dotcom/bookshelf/blob/ernieandflo-website/images/meet-and-greet.jpg?raw=true"
+        data-i18n-aria="dlr.gallery.alt1"
+        alt="Lancement de Dans la rue a la bibliotheque Gabrielle-Roy"
+        onerror="this.parentElement.style.background='var(--color-bg)'; this.style.display='none';"
+      >
+    </div>
+    <div class="gallery-item">
+      <img
+        src="https://github.com/ernieandflo-dotcom/bookshelf/blob/ernieandflo-website/images/auditorium.jpg?raw=true"
+        data-i18n-aria="dlr.gallery.alt2"
+        alt="Meet and greet avec Florien Bizimana"
+        onerror="this.parentElement.style.background='var(--color-bg)'; this.style.display='none';"
+      >
+    </div>
+    <div class="gallery-item">
+      <img
+        src="https://github.com/ernieandflo-dotcom/bookshelf/blob/ernieandflo-website/images/flo-and-ernie.jpg?raw=true"
+        data-i18n-aria="dlr.gallery.alt3"
+        alt="Eleves de l'ecole des Berges au lancement"
+        onerror="this.parentElement.style.background='var(--color-bg)'; this.style.display='none';"
+      >
+    </div>
+  </div>
+
+  <div class="quote-band" style="padding: 4rem 1.5rem;">
+    <p style="font-family:var(--font-display);font-size:clamp(1.1rem,2.5vw,1.4rem);font-style:italic;color:#f0ead8;max-width:640px;margin:0 auto 2rem;line-height:1.65;"
+      data-i18n="dlr.final.quote">
+      Un outil pour parents, enseignants et intervenants - et un cadeau pour les enfants qui cherchent des mots.
+    </p>
+    <button class="btn btn-primary" data-open-buy aria-haspopup="dialog" aria-controls="buy-modal">
+      <span data-i18n="dlr.final.cta">Obtenir le livre</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    </button>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <p data-i18n="footer.copy">&copy; 2026 Ernie And Flo Creations. Tous droits reserves.</p>
+      <p><a href="about.html" data-i18n="footer.contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <!-- BUY MODAL -->
+  <div id="buy-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button id="modal-close-btn" class="modal-close" data-i18n-aria="modal.close">✕</button>
+      <h2 class="modal-title" id="modal-title" data-i18n="modal.title">Ou l'acheter</h2>
+      <p class="modal-subtitle" data-i18n="modal.subtitle">Choisissez votre libraire prefere :</p>
+      <div class="modal-links">
+        <a href="https://www.miditrente.ca/fr/produit/dans-la-rue" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.miditrente">Editions Midi trente (editeur)</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://pantoute.leslibraires.ca/livres/dans-la-rue-album-psychoeducatif-pour-mieux-comprendre-l-itinerance-9782925568124" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.pantoute">Librairie Pantoute</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://www.archambault.ca/livres/dans-la-rue-album-psycho%C3%A9ducatif-pour-mieux-comprendre-l'itin%C3%A9rance/collectif/9782925568124/?id=4594699&cat=1890822" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.archambault">Archambault</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://www.renaud-bray.com/Livres_Produit.aspx?id=4594699&def=Dans+la+rue+%3a+Album+psycho%c3%a9ducatif+pour+mieux+comprendre+l%27itin%c3%a9rance%2cCOLLECTIF%2c9782925568124" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.renaudbray">Renaud-Bray</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+      <hr class="modal-divider">
+      <div class="modal-library-section">
+        <p class="modal-library-label" data-i18n="modal.lib.label">Ou consultez-le gratuitement</p>
+        <a href="http://catalogue.bibliothequedequebec.qc.ca/client/fr_CA/general/search/detailnonmodal/ent:$002f$002fSD_ILS$002f0$002fSD_ILS:1207609/ada" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.bib">Bibliotheque de Quebec</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n-engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

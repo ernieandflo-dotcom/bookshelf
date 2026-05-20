@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Obtenez un extrait gratuit de I Wrote 100 Haiku -- Ernie And Flo.">
+  <title>Extrait gratuit -- Ernie And Flo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/i18n.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo" aria-label="Retour a l'accueil">
+        <img
+          src="https://raw.githubusercontent.com/ernieandflo-dotcom/bookshelf/0894cab24a3cba51023ef85c8541652ef5d89e5c/images/meme_sealofapproval.svg"
+          alt="Ernie And Flo"
+          width="44" height="44"
+        >
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"
+        data-i18n-aria="nav.toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+
+      <ul class="nav-links" role="navigation" data-i18n-aria="nav.label">
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="books.html" data-i18n="nav.books">Livres</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="about.html" data-i18n="nav.about">A propos</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+      </ul>
+
+      <div id="dropdown-menu" class="dropdown-menu" role="navigation" data-i18n-aria="nav.mobile">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="books.html" data-i18n="nav.books">Livres</a>
+        <a href="about.html" data-i18n="nav.about">A propos</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="section" aria-labelledby="sample-heading">
+    <h1 class="section__title" id="sample-heading" data-i18n="sample.heading">Obtenez un extrait gratuit !</h1>
+    <p class="section__lead" data-i18n="sample.lead__html"></p>
+
+    <form id="sampleForm" class="form-card" novalidate>
+      <input type="text" name="honeypot" class="honeypot" tabindex="-1" autocomplete="off">
+
+      <div class="form-group">
+        <label for="name" data-i18n="sample.form.name">Nom</label>
+        <input type="text" id="name" name="name" required
+          data-i18n-placeholder="sample.form.name.ph"
+          placeholder="Votre nom">
+      </div>
+
+      <div class="form-group">
+        <label for="email" data-i18n="sample.form.email">Adresse courriel</label>
+        <input type="email" id="email" name="email" required
+          data-i18n-placeholder="sample.form.email.ph"
+          placeholder="votre@courriel.com">
+      </div>
+
+      <div class="form-group consent-row">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent" data-i18n="sample.form.consent">
+          J'accepte l'utilisation de mes informations personnelles a des fins de communication.
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn--red btn--full" data-i18n="sample.form.submit">
+        Recevoir l'extrait (GRATUIT)
+      </button>
+    </form>
+
+    <p id="responseMessage" aria-live="polite" data-i18n="sample.success">
+      Merci ! Votre extrait a ete envoye a votre adresse courriel.
+      Vous allez etre redirige vers la page d'accueil.
+    </p>
+  </section>
+
+
+  <footer>
+    <div class="footer-inner">
+      <p data-i18n="footer.copy">&copy; 2026 Ernie And Flo Creations. Tous droits reserves.</p>
+      <p><a href="about.html" data-i18n="footer.contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="js/email.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n-engine.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    emailjs.init("JirJ4-BPe5UTaHc6V");
+
+    document.getElementById("sampleForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      if (this.querySelector('[name="honeypot"]').value) return;
+
+      var name    = document.getElementById("name").value.trim();
+      var email   = document.getElementById("email").value.trim();
+      var consent = document.getElementById("consent").checked;
+
+      if (!consent) {
+        // Re-read the consent label text so the alert matches the active language
+        var consentLabel = document.querySelector("label[for='consent']").textContent;
+        alert(consentLabel);
+        return;
+      }
+
+      try {
+        await emailjs.send("service_hcqlzmh", "template_y3pt28d", { name, email });
+        document.getElementById("responseMessage").style.display = "block";
+        this.style.display = "none";
+        setTimeout(function () {
+          window.location.href = "https://www.ernieandflo.com/";
+        }, 4000);
+      } catch (error) {
+        console.error("EmailJS error:", error);
+        var msg = error?.text
+          ? "Error " + error.status + ": " + error.text
+          : (error?.message ? "Network error: " + error.message : "An unknown error occurred.");
+        alert(msg);
+      }
+    });
+  </script>
+</body>
+</html>

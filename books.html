@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Livres par Ernie And Flo Creations -- poesie, manga, et plus.">
+  <title>Livres -- Ernie And Flo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/i18n.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo" aria-label="Retour a l'accueil">
+        <img
+          src="https://raw.githubusercontent.com/ernieandflo-dotcom/bookshelf/0894cab24a3cba51023ef85c8541652ef5d89e5c/images/meme_sealofapproval.svg"
+          alt="Ernie And Flo"
+          width="44" height="44"
+        >
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"
+        data-i18n-aria="nav.toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+
+      <ul class="nav-links" role="navigation" data-i18n-aria="nav.label">
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="index.html"  data-i18n="nav.home">Accueil</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="books.html"  data-i18n="nav.books">Livres</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="about.html"  data-i18n="nav.about">A propos</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+      </ul>
+
+      <div id="dropdown-menu" class="dropdown-menu" role="navigation" data-i18n-aria="nav.mobile">
+        <a href="index.html"  data-i18n="nav.home">Accueil</a>
+        <a href="books.html"  data-i18n="nav.books">Livres</a>
+        <a href="about.html"  data-i18n="nav.about">A propos</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="section" aria-labelledby="books-heading">
+    <h1 class="section__title" id="books-heading" data-i18n="books.heading">Livres</h1>
+
+    <div class="book-list">
+
+      <!-- ── Dans la rue (French) ──────────────────────────── -->
+      <article class="book-card" id="dans-la-rue">
+        <div class="book-cover book-cover--dlr" role="img" aria-label="Couverture de Dans la rue"></div>
+
+        <div class="book-info">
+          <ul class="book-info__meta">
+            <!--
+              Book title is intentionally NOT wrapped in data-i18n.
+              Titles are never translated, per project rules.
+            -->
+            <li><strong>Dans la rue</strong></li>
+            <li data-i18n="books.dlr.desc">
+              Xavier trouve que son quartier a beaucoup change ces dernieres annees...
+            </li>
+            <li>
+              <strong data-i18n="books.dlr.author">Auteur :</strong>
+              Engrenage Saint-Roch
+            </li>
+            <li>
+              <strong data-i18n="books.dlr.illustrator">Illustrateur :</strong>
+              Florien Lavoisier Bizimana
+            </li>
+            <li>
+              <strong data-i18n="books.dlr.year">Annee :</strong>
+              2026
+            </li>
+          </ul>
+
+          <!-- Book language badge -->
+          <span class="book-lang-badge" data-book-lang="fr">Francais</span>
+
+          <div class="book-info__actions" style="margin-top: 1rem;">
+            <a href="danslarue.html" class="btn btn-secondary">
+              <span data-i18n="books.dlr.cta.details">Voir les details</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <button class="btn btn-primary" data-open-buy aria-haspopup="dialog" aria-controls="buy-modal">
+              <span data-i18n="books.dlr.cta.buy">Acheter</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── I Wrote 100 Haiku (English) ──────────────────── -->
+      <article class="book-card" id="iw1hh">
+        <div class="book-cover book-cover--iw1hh" role="img" aria-label="Cover of I Wrote 100 Haiku"></div>
+
+        <div class="book-info">
+          <ul class="book-info__meta">
+            <li><strong>I Wrote 100 Haiku: Then Robots Ruthlessly Rated Them</strong></li>
+            <li data-i18n="books.iw1hh.desc__html"></li>
+            <li>
+              <strong data-i18n="books.iw1hh.author">Auteur :</strong>
+              Ernest G. Bizimana
+            </li>
+            <li>
+              <strong data-i18n="books.iw1hh.year">Annee :</strong>
+              2024
+            </li>
+          </ul>
+
+          <!-- Book language badge -->
+          <span class="book-lang-badge" data-book-lang="en">Anglais</span>
+
+          <div class="book-info__actions" style="margin-top: 1rem;">
+            <a href="https://buymeacoffee.com/grossetete/e/377888" class="btn btn--red">
+              <span data-i18n="books.iw1hh.cta.pdf">PDF (5$ CAD)</span>
+            </a>
+            <a href="sample.html" class="btn btn-secondary">
+              <span data-i18n="books.iw1hh.cta.sample">Extrait gratuit</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── Random Niggas Fighting Pt.2 (English) ─────────── -->
+      <article class="book-card" id="rnf2">
+        <div class="book-cover book-cover--rnf2" role="img" aria-label="Cover of Random Niggas Fighting Part 2"></div>
+
+        <div class="book-info">
+          <ul class="book-info__meta">
+            <li><strong>Random Niggas Fighting (Part 2)</strong></li>
+            <li data-i18n="books.rnf2.desc__html"></li>
+            <li>
+              <strong data-i18n="books.rnf2.author">Auteur :</strong>
+              Florien Lavoisier Bizimana
+            </li>
+            <li>
+              <strong data-i18n="books.rnf2.year">Annee :</strong>
+              2023
+            </li>
+          </ul>
+
+          <!-- Book language badge -->
+          <span class="book-lang-badge" data-book-lang="en">Anglais</span>
+
+          <div class="book-info__actions" style="margin-top: 1rem;">
+            <a href="https://globalcomix.com/c/random-niggas-fighting-part-2" class="btn btn--red">
+              <span data-i18n="books.rnf2.cta.read">Lire le manga</span>
+            </a>
+          </div>
+          <p class="book-info__note" data-i18n="books.rnf2.note">*Gratuit pour une duree limitee*</p>
+        </div>
+      </article>
+
+      <!--
+        ADD NEW BOOKS:
+        1. Copy an <article class="book-card"> block above.
+        2. Give it a unique id.
+        3. Add a .book-cover--[slug] CSS rule in styles.css (section 12).
+        4. Set data-book-lang="fr" or "en" on the .book-lang-badge.
+        5. Add translation keys in js/i18n.js under both "fr" and "en".
+      -->
+
+    </div>
+  </section>
+
+
+  <!-- BUY MODAL (Dans la rue) -->
+  <div id="buy-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button id="modal-close-btn" class="modal-close" data-i18n-aria="modal.close">✕</button>
+
+      <h2 class="modal-title" id="modal-title" data-i18n="modal.title">Ou l'acheter</h2>
+      <p class="modal-subtitle" data-i18n="modal.subtitle">Choisissez votre libraire prefere :</p>
+
+      <div class="modal-links">
+        <a href="https://www.miditrente.ca/fr/produit/dans-la-rue" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.miditrente">Editions Midi trente (editeur)</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://pantoute.leslibraires.ca/livres/dans-la-rue-album-psychoeducatif-pour-mieux-comprendre-l-itinerance-9782925568124" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.pantoute">Librairie Pantoute</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://www.archambault.ca/livres/dans-la-rue-album-psycho%C3%A9ducatif-pour-mieux-comprendre-l'itin%C3%A9rance/collectif/9782925568124/?id=4594699&cat=1890822" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.archambault">Archambault</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://www.renaud-bray.com/Livres_Produit.aspx?id=4594699&def=Dans+la+rue+%3a+Album+psycho%c3%a9ducatif+pour+mieux+comprendre+l%27itin%c3%a9rance%2cCOLLECTIF%2c9782925568124" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.renaudbray">Renaud-Bray</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <hr class="modal-divider">
+
+      <div class="modal-library-section">
+        <p class="modal-library-label" data-i18n="modal.lib.label">Ou consultez-le gratuitement</p>
+        <a href="http://catalogue.bibliothequedequebec.qc.ca/client/fr_CA/general/search/detailnonmodal/ent:$002f$002fSD_ILS$002f0$002fSD_ILS:1207609/ada" class="modal-link" target="_blank" rel="noopener">
+          <span data-i18n="modal.bib">Bibliotheque de Quebec</span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-inner">
+      <p data-i18n="footer.copy">&copy; 2026 Ernie And Flo Creations. Tous droits reserves.</p>
+      <p><a href="about.html" data-i18n="footer.contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n-engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

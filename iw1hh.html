@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I Wrote 100 Haiku: Then Robots Ruthlessly Rated Them -- une exploration poetique de l'intelligence artificielle.">
+  <title>I Wrote 100 Haiku -- Ernie And Flo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/i18n.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-logo" aria-label="Retour a l'accueil">
+        <img
+          src="https://raw.githubusercontent.com/ernieandflo-dotcom/bookshelf/0894cab24a3cba51023ef85c8541652ef5d89e5c/images/meme_sealofapproval.svg"
+          alt="Ernie And Flo"
+          width="44" height="44"
+        >
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"
+        data-i18n-aria="nav.toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+
+      <ul class="nav-links" role="navigation" data-i18n-aria="nav.label">
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="books.html" data-i18n="nav.books">Livres</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+        <li><a href="about.html" data-i18n="nav.about">A propos</a></li>
+        <li><div class="nav-divider" aria-hidden="true"></div></li>
+      </ul>
+
+      <div id="dropdown-menu" class="dropdown-menu" role="navigation" data-i18n-aria="nav.mobile">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="books.html" data-i18n="nav.books">Livres</a>
+        <a href="about.html" data-i18n="nav.about">A propos</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="iw1hh-hero" aria-labelledby="iw1hh-title">
+    <!--
+      "I Wrote 100 Haiku" is the book title -- never translated.
+      The subtitle "Then Robots Ruthlessly Rated Them" IS translated
+      because it functions as a tagline, not part of the title proper.
+    -->
+    <h1 class="iw1hh-hero__title" id="iw1hh-title">I Wrote 100 Haiku</h1>
+    <h2 class="iw1hh-hero__subtitle" data-i18n="iw1hh.subtitle">Then Robots Ruthlessly Rated Them</h2>
+
+    <p class="section__lead" data-i18n="iw1hh.tagline">"A bloody introduction to the haiku poem."</p>
+    <p class="section__lead" data-i18n="iw1hh.p1"></p>
+    <p class="section__lead" data-i18n="iw1hh.p2"></p>
+    <p class="section__lead" data-i18n="iw1hh.p3__html"></p>
+
+    <div class="cta-group" style="justify-content:center; margin-top:1.5rem;">
+      <a href="https://www.buymeacoffee.com/grossetete/e/377888" class="btn btn--green">
+        <span data-i18n="iw1hh.cta.pdf">PDF (5$ CAD)</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="iw1hh-cover-wrap">
+    <div class="iw1hh-cover" role="img" aria-label="Book cover -- I Wrote 100 Haiku"></div>
+  </div>
+
+  <section class="section" style="text-align:center;">
+    <a href="sample.html" class="btn btn--red btn--iw1hh">
+      <span data-i18n="iw1hh.cta.sample">Extrait gratuit</span>
+    </a>
+    <p class="sample-click" data-i18n="iw1hh.sample.click">
+      Cliquez ici pour recevoir un extrait gratuit du livre.
+    </p>
+  </section>
+
+
+  <footer>
+    <div class="footer-inner">
+      <p data-i18n="footer.copy">&copy; 2026 Ernie And Flo Creations. Tous droits reserves.</p>
+      <p><a href="about.html" data-i18n="footer.contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n-engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
